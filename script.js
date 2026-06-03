@@ -1,3 +1,11 @@
+// --- Mute/Unmute Button ---
+function toggleMute() {
+  const video = document.querySelector('video');
+  const btn = document.getElementById('unmute-btn');
+  video.muted = !video.muted;
+  btn.textContent = video.muted ? '🔇 Tap for Sound' : '🔊 Mute';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     // --- Live Age Counter ---

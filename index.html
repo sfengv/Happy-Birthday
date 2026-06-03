@@ -30,15 +30,20 @@
 <header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
 <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
     <source src="img/hbd_evan.mp4" type="video/mp4">
+      
 Your browser does not support the video tag.
 </video>
+<button id="unmute-btn" onclick="toggleMute()" 
+  class="absolute bottom-6 right-6 z-20 bg-white/30 hover:bg-white/50 text-white font-semibold px-6 py-3 rounded-full backdrop-blur transition animate-pulse text-lg">
+  🔇 Tap for Sound
+</button>
 
 <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
 <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
 <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday, My Dear Friend 🌟Evan I. Salters🌟</h1>
 <p class="mt-4 text-xl font-semibold">Celebrating 28 years of you 🥹 Wow kids are calling you unc now 👀</p>
-<div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed"></div>
+<div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed" style="display: none;"></div>
 </div>
 </header>
 
@@ -60,51 +65,61 @@ Sheesh❤️
 
 <!-- Section 3: The Timeline -->
 <section class="my-16 md:my-24">
-<h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">U💘</h2>
+<h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">💘</h2>
 <div class="space-y-16">
 <!-- Timeline Item 1 -->
 <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
 <!-- TODO: Replace with your photo -->
-<img src="img/jammu.png" alt="Add photo 1" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+<img src="img/2022.jpeg" alt="Add photo 1" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
 <div class="text-center md:text-left">
 <!-- TODO: Customize the date and story -->
-<h3 class="text-2xl font-anime text-sakura">Our first Meeting</h3>
-<p class="mt-2 text-lg">Write your Story here</p>
+<h3 class="text-2xl font-anime text-sakura">Sometime in 2022</h3>
+<p class="mt-2 text-lg">PARTY IN AC!</p>
 <br>
 </div>
 </div>
 <!-- Timeline Item 2 -->
 <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
 <!-- TODO: Replace with your photo -->
-<img src="img/food.png" alt="Add photo 2" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+<img src="img/2023.jpeg" alt="Add photo 2" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
 <div class="text-center md:text-right">
 <!-- TODO: Customize the date and story -->
-<h3 class="text-2xl font-anime text-sakura">Part 2</h3>
-<p class="mt-2 text-lg">Message 2</p>
+<h3 class="text-2xl font-anime text-sakura">2023</h3>
+<p class="mt-2 text-lg">I totally forgot about this but always a good time at FDR</p>
 <br>
 </div>
 </div>
 <!-- Timeline Item 3 (NEW) -->
 <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
-<img src="img/mumbai.png" alt="Add photo 3" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+<img src="img/communist_manifesto.jpeg" alt="Add photo 3" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
 <div class="text-center md:text-left">
-<h3 class="text-2xl font-anime text-sakura">Part3</h3>
-<p class="mt-2 text-lg">Message3</p>
+<h3 class="text-2xl font-anime text-sakura">White Elephant?</h3>
+<p class="mt-2 text-lg">Feels like ages ago lol Love the Communist Manifesto in the shot</p>
 <br>
 </div>
 </div>
 <!-- Timeline Item 4 (NEW) -->
 <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
-<img src="img/imagica.png" alt="Add photo4" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+<img src="img/poconos.jpeg" alt="Add photo4" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
 <div class="text-center md:text-right">
-<h3 class="text-2xl font-anime text-sakura">Part 4</h3>
-<p class="mt-2 text-lg">Message 4</p>
+<h3 class="text-2xl font-anime text-sakura">Poconos</h3>
+<p class="mt-2 text-lg">Caught you slacking 😂</p>
+</br>
+</div>
+</div>
+<!-- Timeline Item 5 (NEW) -->
+<div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+<img src="img/poconos2.jpeg" alt="Add photo 3" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+<div class="text-center md:text-left">
+<h3 class="text-2xl font-anime text-sakura">Poconos again</h3>
+<p class="mt-2 text-lg">Reaching the peak of a solid hike with a solid pic 📸</p>
 <br>
 </div>
 </div>
 </div>
 </section>
 
+<div style="display: none;">
 <!-- Section 4: Your Favourite Photos of your loved Ones (NEW SECTION) -->
 <section class="my-16 md:my-24">
 <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Hall of Fame</h2>
@@ -118,7 +133,7 @@ Sheesh❤️
 </button>
 
 <!-- Scrollable Container -->
-<div id="hall-of-fame-scroller" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4">
+<div id="hall-of-fame-scroller" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4" display="none">
 <div class="flex snap-x snap-mandatory gap-8">
 <!--  Card 1 -->
 <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="100">
@@ -172,8 +187,10 @@ Sheesh❤️
 </div>
 </div>
 </section>
+</div>
 
-  <!-- Section 5: The Gallery -->
+<!-- 
+  Section 5: The Gallery
   <section class="my-16 md:my-24">
     <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">The Y.V.A. Collection</h2>
     <p class="text-center text-lg -mt-8 mb-12">(Your Very-own Adventures)</p>
@@ -190,7 +207,7 @@ Sheesh❤️
       <a href="img/4.png" data-aos="zoom-in" data-aos-delay="300" class="block w-full h-48 md:h-64">
         <img src="img/4.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 4">
       </a>
-      <!-- Second Row of Photos -->
+      Second Row of Photos
       <a href="img/5.png" data-aos="zoom-in" data-aos-delay="400" class="block w-full h-48 md:h-64">
         <img src="img/5.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 5">
       </a>
@@ -203,7 +220,7 @@ Sheesh❤️
       <a href="img/8.png" data-aos="zoom-in" data-aos-delay="700" class="block w-full h-48 md:h-64">
         <img src="img/8.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 8">
       </a>
-      <!-- Third Row of Photos -->
+      Third Row of Photos
       <a href="img/9.png" data-aos="zoom-in" data-aos-delay="800" class="block w-full h-48 md:h-64">
         <img src="img/9.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 9">
       </a>
@@ -217,7 +234,7 @@ Sheesh❤️
         <img src="img/12.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 12">
       </a>
     </div>
-  </section>
+  </section> -->
 
   
 <!-- Section 6: Finale -->
